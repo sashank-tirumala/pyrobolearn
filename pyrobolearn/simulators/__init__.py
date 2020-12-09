@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # load middlewares
-from . import middlewares
+# from . import middlewares
 
 # check Python version
 import sys
@@ -20,11 +20,11 @@ from .bullet import Bullet
 
 if python_version >= 3:
     # Dart simulator
-    try:
-        import dartpy
-        from .dart import Dart
-    except ImportError as e:
-        print("Dart could not be found on this system... Skipping prl.simulators.Dart...")
+    # try:
+    #     import dartpy
+    #     from .dart import Dart
+    # except ImportError as e:
+    #     print("Dart could not be found on this system... Skipping prl.simulators.Dart...")
 
     # MuJoCo simulator
     try:
@@ -34,11 +34,11 @@ if python_version >= 3:
         print("MuJoCo could not be found on this system... Skipping prl.simulators.Mujoco...")
 
 # Raisim simulator
-try:
-    import raisimpy
-    from .raisim import Raisim
-except ImportError as e:
-    print("Raisim could not be found on this system... Skipping prl.simulators.Raisim...")
+# try:
+#     import raisimpy
+#     from .raisim import Raisim
+# except ImportError as e:
+#     print("Raisim could not be found on this system... Skipping prl.simulators.Raisim...")
 
 # # Vrep simulator (note that there is a currently a problem when loading pybullet with pyrep)
 # try:
